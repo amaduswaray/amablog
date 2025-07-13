@@ -1,0 +1,38 @@
+<script lang="ts">
+	import type { LayoutProps } from '../$types';
+	let { data, children }: LayoutProps = $props();
+
+	const { metadata } = data;
+</script>
+
+<article class="col-span-4 mx-auto w-full px-6 py-8 [:where(&)]:max-w-3xl">
+	<img class="my-2 w-full rounded-lg" src={metadata.image} alt="" />
+	<h1 class="mt-10 text-left text-4xl font-bold text-neutral-800 dark:text-neutral-200">
+		{metadata.title}
+	</h1>
+	<div class="mt-2 flex items-center justify-between border-b border-neutral-500">
+		<div class="flex items-center py-5 text-base">
+			<a href="/home">
+				<img
+					class="mr-3 h-10 w-10 rounded-full border-2 border-neutral-500"
+					src="/profile.jpeg"
+					alt="avatar"
+				/>
+			</a>
+			<span class="mr-2 text-neutral-800 dark:text-neutral-200">
+				<a href="/about"> Amadu Swaray </a>
+			</span>
+			<span class="text-sm text-neutral-400">{metadata.date} min read</span>
+		</div>
+		<div class=" hidden items-center text-base sm:flex">
+			<span class="mr-2 text-neutral-400">{metadata.date}</span>
+			<!-- <flux:icon.clock class="size-5 text-neutral-400" /> -->
+		</div>
+	</div>
+
+	<div
+		class="prose dark:prose-invert my-6 py-3 text-justify text-lg text-neutral-800 dark:text-neutral-200"
+	>
+		{@render children()}
+	</div>
+</article>
