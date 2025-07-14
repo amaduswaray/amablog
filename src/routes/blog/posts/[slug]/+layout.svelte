@@ -1,11 +1,31 @@
 <script lang="ts">
 	import type { LayoutProps } from '../$types';
-	let { data, children }: LayoutProps = $props();
+	import * as Breadcrumb from '$lib/components/ui/breadcrumb/index.js';
+	import type { LayoutData } from './$types';
 
-	const { metadata } = data;
+	let { data, children }: LayoutProps = $props();
+	const relData = data as LayoutData;
+	const { metadata, readTime } = relData;
 </script>
 
 <article class="col-span-4 mx-auto w-full px-6 py-8 [:where(&)]:max-w-3xl">
+	<div>
+		<Breadcrumb.Root>
+			<Breadcrumb.List>
+				<Breadcrumb.Item>
+					<Breadcrumb.Link href="/">Home</Breadcrumb.Link>
+				</Breadcrumb.Item>
+				<Breadcrumb.Separator />
+				<Breadcrumb.Item>
+					<Breadcrumb.Link href="../">Posts</Breadcrumb.Link>
+				</Breadcrumb.Item>
+				<Breadcrumb.Separator />
+				<Breadcrumb.Item>
+					<Breadcrumb.Page>{metadata.title}</Breadcrumb.Page>
+				</Breadcrumb.Item>
+			</Breadcrumb.List>
+		</Breadcrumb.Root>
+	</div>
 	<img class="my-2 w-full rounded-lg" src={metadata.image} alt="" />
 	<h1 class="mt-10 text-left text-4xl font-bold text-neutral-800 dark:text-neutral-200">
 		{metadata.title}
@@ -22,7 +42,7 @@
 			<span class="mr-2 text-neutral-800 dark:text-neutral-200">
 				<a href="/about"> Amadu Swaray </a>
 			</span>
-			<span class="text-sm text-neutral-400">{metadata.date} min read</span>
+			<span class="text-sm text-neutral-400">{readTime} min read</span>
 		</div>
 		<div class=" hidden items-center text-base sm:flex">
 			<span class="mr-2 text-neutral-400">{metadata.date}</span>

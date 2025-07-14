@@ -1,3 +1,4 @@
 ## Amadu's and Don'ts
 
-testing changes
+[Song sharing](https://www.tapelink.io)
+[Sharing books](https://booklinker.com)

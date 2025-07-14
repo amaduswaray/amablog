@@ -1,9 +1,14 @@
-<div class="relative border-b border-neutral-200 p-8 pb-8 xl:flex-1 dark:border-neutral-700">
-	<h1 class="text-6xl font-semibold lg:text-8xl">Blogposts</h1>
-	<h3 class="py-8 text-xl">Connect:</h3>
-	<div>Connect component</div>
+<script lang="ts">
+	import PostList from '$lib/components/posts/PostList.svelte';
+	const { data } = $props();
+	const { posts } = data;
+</script>
+
+<div
+	class="items centerborder-b relative flex justify-center border-neutral-200 p-8 pb-8 xl:flex-1 dark:border-neutral-700"
+>
+	<h1 class="text-5xl font-stretch-expanded underline decoration-2 underline-offset-8">BLOGS</h1>
 </div>
 <div class="relative h-full flex-1/2 rounded-xl border-neutral-200 p-8 dark:border-neutral-700">
-	<h2 class="py-8 text-3xl">Latest Blogs</h2>
-	<div>Blog list</div>
+	<PostList {posts} />
 </div>
