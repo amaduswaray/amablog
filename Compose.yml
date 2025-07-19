@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  amablog:
+    image: amablog
+    container_name: amablog
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      # Optional: mount logs or data directories
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - amablog-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  amablog-network:
+    driver: bridge
