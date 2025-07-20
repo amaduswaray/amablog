@@ -93,6 +93,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docker-compose.yml
-          git commit -m "Update docker-compose.yml with release ${{ github.ref_name }}" || exit 0
+          git add Compose.yml
+          git commit -m "Update Compose.yml with release ${{ github.ref_name }}" || exit 0
           git push
