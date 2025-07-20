@@ -5,7 +5,7 @@ import type { LayoutServerLoad } from './$types';
 const calculateTime = (item: Component) => {
 	const text = item.toString();
 	const words = text.trim().split(/\s+/).length;
-	const mins = Math.max(1, Math.round(words / 300));
+	const mins = Math.max(1, Math.round(words / 500));
 	return mins;
 };
 
