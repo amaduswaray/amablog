@@ -85,9 +85,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update docker-compose.yml
+      - name: Update Compose.yml
         run: |
-          sed -i "s|image: amablog|image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}|g" docker-compose.yml
+          sed -i "s|image: amablog|image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}|g" Compose.yml
 
       - name: Commit updated compose file
         run: |
