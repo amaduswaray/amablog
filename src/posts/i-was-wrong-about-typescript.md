@@ -6,7 +6,7 @@ image: '/post-images/wrong-about-typescript/thumbnail.jpg'
 categories:
   - blog
   - tutorial
-published: true
+published: false
 ---
 
 ## TLDR

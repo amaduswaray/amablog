@@ -6,7 +6,7 @@ image: '/post-images/takeaways-from-studies/thumbnail.jpg'
 categories:
   - blog
   - tutorial
-published: true
+published: false
 ---
 
 ## TLDR
