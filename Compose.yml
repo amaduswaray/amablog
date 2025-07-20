@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   amablog:
-    image: amablog
+    image: ghcr.io/amaduswaray/amablog:latest
     container_name: amablog
     build:
       context: .
