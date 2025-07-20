@@ -76,23 +76,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-  update-compose:
-    needs: build-and-push-image
-    runs-on: ubuntu-latest
-    if: github.event_name == 'release'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Update docker-compose.yml
-        run: |
-          sed -i "s|image: amablog|image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}|g" docker-compose.yml
-
-      - name: Commit updated compose file
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add docker-compose.yml
-          git commit -m "Update docker-compose.yml with release ${{ github.ref_name }}" || exit 0
-          git push
