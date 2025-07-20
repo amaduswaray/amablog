@@ -85,14 +85,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update Compose.yml
+      - name: Update docker-compose.yml
         run: |
-          sed -i "s|image: amablog|image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}|g" Compose.yml
+          sed -i "s|image: amablog|image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}|g" docker-compose.yml
 
       - name: Commit updated compose file
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add Compose.yml
-          git commit -m "Update Compose.yml with release ${{ github.ref_name }}" || exit 0
+          git add docker-compose.yml
+          git commit -m "Update docker-compose.yml with release ${{ github.ref_name }}" || exit 0
           git push
