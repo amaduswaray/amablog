@@ -128,7 +128,7 @@ And don’t get me started on Elixir’s one-liners. You’re not going to find 
 
 ```
 
-This could all of course can be formatted like this:
+This can all of course be formatted like this:
 
 ```elixir
 "posts/*.md" # The |>(pipe) operator sends the output of the left-hand-side as input to function on the right-hand-side
@@ -158,7 +158,7 @@ Funnily enough, Phoenix LiveView is also batteries-included, but Laravel was the
 
 ![laravel meme](/post-images/coding-blog/meme.jpg)
 
-I took a liking to MVC architecture, and it shaped the way I now think about web development. The good thing is that many modern frameworks are converging in that direction with SSR, remote functions, server-side routing, etc.
+I took a liking to the MVC architecture, and it shaped the way I now think about web development. The good thing is that many modern frameworks are converging in that direction with SSR, remote functions, server-side routing, etc.
 
 The second version of this blog was also created in Laravel, but I didn't complete that either.
 

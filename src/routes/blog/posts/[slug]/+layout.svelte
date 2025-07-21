@@ -1,7 +1,10 @@
 <script lang="ts">
 	import type { LayoutProps } from '../$types';
 	import * as Breadcrumb from '$lib/components/ui/breadcrumb/index.js';
+	import Giscus from '@giscus/svelte';
 	import type { LayoutData } from './$types';
+	import { page } from '$app/stores';
+	import { mode } from 'mode-watcher';
 
 	let { data, children }: LayoutProps = $props();
 	const relData = data as LayoutData;
@@ -56,3 +59,21 @@
 		{@render children()}
 	</div>
 </article>
+<hr />
+<div class="px-4 py-4">
+	<Giscus
+		id="comments"
+		repo="amaduswaray/amablog"
+		repoId="R_kgDOPMafjg"
+		category="General"
+		categoryId="DIC_kwDOPMafjs4CtPx4"
+		mapping="specific"
+		term={$page.url.pathname}
+		reactionsEnabled="1"
+		emitMetadata="0"
+		inputPosition="bottom"
+		theme={mode.current === 'light' ? 'catppuccin_latte' : 'catppuccin_mocha'}
+		lang="en"
+		loading="lazy"
+	/>
+</div>
