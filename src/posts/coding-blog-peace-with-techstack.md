@@ -41,9 +41,9 @@ Using React to create static sites might have been overkill, however, for some r
 
 That fall, I was in the process of trying to land a summer internship. I remember one of the interviewers explicitly recommending I learn Vue, because “React isn’t all that.” I took his advice and spent a couple of weeks rewriting my already unfinished projects in Vue.
 
-I had some good experiences with Vue, but I couldn't get myself to really like it—mostly because it didn’t have the same hype as React.
+I had some good experiences with Vue, but I couldn't get myself to really like it, mostly because it didn’t have the same hype as React.
 
-Around that time, I also discovered other frameworks like Angular and SolidJS. My plan was to spend the holidays learning them—but something else came up.
+Around that time, I also discovered other frameworks like Angular and SolidJS. My plan was to spend the holidays learning them, but something else came up.
 
 ## Advent of code 2022
 
@@ -119,7 +119,7 @@ I started exploring it back in 2023 and decided to create a blog(that I never co
 
 ```
 
-I really enjoyed learning functional programming. This was some of the most satisfying code I’d ever written. Elixir’s pattern matching and multiple function clauses eliminate the need for traditional conditionals—you just define multiple versions of the same function for different cases.
+I really enjoyed learning functional programming. This was some of the most satisfying code I’d ever written. Elixir’s pattern matching and multiple function clauses eliminate the need for traditional conditionals, you just define multiple versions of the same function for different cases.
 
 And don’t get me started on Elixir’s one-liners. You’re not going to find many languages that let you parse Markdown to HTML this cleanly:
 
@@ -152,7 +152,7 @@ Elixir had a lot going for it. My issue with Phoenix LiveView was that I only ne
 
 When I started my master’s degree, I also did some freelancing. That’s when I realized I kept building the same things: auth, database, ORM, APIs.
 
-Then I discovered Laravel, which was a “batteries-included” framework. This was exciting. What do you mean each project gets auth, payment, email, and layouts out of the box? 90% of the job was done for me. I could just focus on the part I actually cared about: implementing the product.
+Then I discovered Laravel, which was a “batteries-included” framework. This was exciting. What do you mean each project gets auth, payment, email, and layouts out of the box? 90% of the job was done for me. I could just focus on the part I actually cared about: Implementing the product.
 
 Funnily enough, Phoenix LiveView is also batteries-included, but Laravel was the new shiny toy at the time.
 
