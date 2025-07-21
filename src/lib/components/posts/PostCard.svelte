@@ -5,10 +5,10 @@
 
 {#if recent === true}
 	<div
-		class="w-full max-w-3xl transform rounded-lg border border-[var(--border)] p-6 transition-all duration-300 hover:translate-y-[-2px] hover:scale-[1.02] hover:shadow-[4px_4px_20px_rgba(0,0,0,0.1)]"
+		class="w-full max-w-3xl transform rounded-lg border border-border p-6 transition-all duration-300 hover:translate-y-[-2px] hover:scale-[1.02] hover:shadow-[4px_4px_20px_rgba(0,0,0,0.1)]"
 	>
 		<a href={`/blog/posts/${slug}`} class="group block space-y-3">
-			<h2 class="text-xl font-semibold transition-colors group-hover:text-[var(--primary)]">
+			<h2 class="text-xl font-semibold transition-colors group-hover:text-primary">
 				{title}
 			</h2>
 
@@ -24,7 +24,7 @@
 	</div>
 {:else}
 	<div
-		class="w-full max-w-3xl overflow-hidden rounded-lg border border-[var(--border)] shadow-lg transition-transform duration-300 ease-in-out hover:scale-[1.03] hover:text-[var(--primary)] hover:shadow-2xl"
+		class="w-full max-w-3xl overflow-hidden rounded-lg border border-border shadow-lg transition-transform duration-300 ease-in-out hover:scale-[1.03] hover:text-primary hover:shadow-2xl"
 	>
 		<a href={`/blog/posts/${slug}`} aria-label={`Read more about ${title}`}>
 			<img

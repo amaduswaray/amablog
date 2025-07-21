@@ -5,7 +5,7 @@
 		aria-label="Twitter"
 		target="_blank"
 		rel="noopener noreferrer"
-		class="transition-colors hover:text-[var(--primary)] dark:hover:text-[var(--primary)]"
+		class="transition-colors hover:text-primary dark:hover:text-primary"
 	>
 		<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"
 			><path
@@ -18,7 +18,7 @@
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="GitHub"
-		class="transition-colors hover:text-[var(--primary)] dark:hover:text-[var(--primary)]"
+		class="transition-colors hover:text-primary dark:hover:text-primary"
 	>
 		<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"
 			><path
@@ -31,7 +31,7 @@
 		aria-label="LinkedIn"
 		target="_blank"
 		rel="noopener noreferrer"
-		class="transition-colors hover:text-[var(--primary)] dark:hover:text-[var(--primary)]"
+		class="transition-colors hover:text-primary dark:hover:text-primary"
 	>
 		<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"
 			><path

@@ -3,7 +3,7 @@
 	import * as Breadcrumb from '$lib/components/ui/breadcrumb/index.js';
 	import Giscus from '@giscus/svelte';
 	import type { LayoutData } from './$types';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { mode } from 'mode-watcher';
 
 	let { data, children }: LayoutProps = $props();
@@ -68,7 +68,7 @@
 		category="General"
 		categoryId="DIC_kwDOPMafjs4CtPx4"
 		mapping="specific"
-		term={$page.url.pathname}
+		term={page.url.pathname}
 		reactionsEnabled="1"
 		emitMetadata="0"
 		inputPosition="bottom"

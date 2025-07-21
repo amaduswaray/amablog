@@ -2,7 +2,7 @@
 	<!-- Text Content (Left) -->
 	<div class="flex w-3/4 flex-col justify-between space-y-3 p-6">
 		<a href="https://www.tapelink.io/share/u5QTCAgb" target="_blank" rel="noopener noreferrer">
-			<h2 class="text-xl font-semibold transition-colors hover:text-[var(--primary)]">
+			<h2 class="text-xl font-semibold transition-colors hover:text-primary">
 				Next To You
 			</h2>
 		</a>

@@ -2,7 +2,7 @@
 	<a href="https://mybook.to/jrJ4bMO" target="_blank" rel="noopener noreferrer">
 		<div class="relative mr-8 w-2/5 max-w-[180px] min-w-[120px]">
 			<div
-				class="-rotate-[20deg] transform rounded-xl border border-[var(--border)] bg-white p-1 shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:scale-[1.02] hover:shadow-[4px_4px_20px_rgba(0,0,0,0.1)] dark:bg-neutral-900"
+				class="-rotate-[20deg] transform rounded-xl border border-border bg-white p-1 shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:scale-[1.02] hover:shadow-[4px_4px_20px_rgba(0,0,0,0.1)] dark:bg-neutral-900"
 			>
 				<img
 					src="/featured/book.jpg"
@@ -16,7 +16,7 @@
 	<!-- Text Content -->
 	<div class="flex flex-col justify-between space-y-3 p-6">
 		<a href="https://mybook.to/jrJ4bMO" target="_blank" rel="noopener noreferrer">
-			<h2 class="dark: text-xl font-semibold transition-colors hover:text-[var(--primary)]">
+			<h2 class="dark: text-xl font-semibold transition-colors hover:text-primary">
 				The Three Body Problem
 			</h2>
 		</a>
