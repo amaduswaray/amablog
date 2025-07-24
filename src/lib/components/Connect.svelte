@@ -1,6 +1,6 @@
 <div class="flex space-x-6 text-sm">
 	<!-- Social icons placeholders -->
-	<a
+	<!-- <a
 		href="#"
 		aria-label="Twitter"
 		target="_blank"
@@ -12,13 +12,13 @@
 				d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.57 8.57 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.15 12.15 0 0 1 3.15 4.57a4.27 4.27 0 0 0 1.33 5.72 4.2 4.2 0 0 1-1.94-.54v.05a4.28 4.28 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.97A8.6 8.6 0 0 1 2 19.54 12.11 12.11 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.54A8.36 8.36 0 0 0 22.46 6z"
 			/></svg
 		>
-	</a>
+	</a> -->
 	<a
 		href="https://github.com/amaduswaray"
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="GitHub"
-		class="transition-colors hover:text-primary dark:hover:text-primary"
+		class="hover:text-primary dark:hover:text-primary transition-colors"
 	>
 		<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"
 			><path
@@ -31,7 +31,7 @@
 		aria-label="LinkedIn"
 		target="_blank"
 		rel="noopener noreferrer"
-		class="transition-colors hover:text-primary dark:hover:text-primary"
+		class="hover:text-primary dark:hover:text-primary transition-colors"
 	>
 		<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"
 			><path
