@@ -13,7 +13,7 @@
 		<p class="py-4">
 			Stephen King once said writing refines your thoughts. This blog is where I sharpen mine.
 		</p>
-		<p class="py-4">Developer @ Orgrbrain</p>
+		<p class="py-4">Developer @ Orgbrain</p>
 		<Connect />
 	</div>
 	<Featured />
