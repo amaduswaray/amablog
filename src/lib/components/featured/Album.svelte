@@ -1,7 +1,7 @@
 <div class="flex h-full w-full max-w-3xl flex-col-reverse p-0 sm:flex-row">
 	<!-- Text Content (Left) -->
 	<div class="flex w-3/4 flex-col justify-between space-y-3 p-6">
-		<a href="https://www.tapelink.io/share/u5QTCAgb" target="_blank" rel="noopener noreferrer">
+		<a href="https://www.tapelink.io/share/r4GDkkYt" target="_blank" rel="noopener noreferrer">
 			<h2 class="hover:text-primary text-xl font-semibold transition-colors">BROWN SUGAH</h2>
 		</a>
 

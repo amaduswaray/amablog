@@ -1,5 +1,5 @@
 <div class="flex w-full max-w-3xl flex-col justify-between gap-5 sm:flex-row">
-	<a href="https://mybook.to/jrJ4bMO" target="_blank" rel="noopener noreferrer">
+	<a href="https://www.viz.com/slam-dunk" target="_blank" rel="noopener noreferrer">
 		<div class="relative mr-8 w-2/5 max-w-[180px] min-w-[120px]">
 			<div
 				class="border-border -rotate-[20deg] transform rounded-xl border bg-white p-1 shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:scale-[1.02] hover:shadow-[4px_4px_20px_rgba(0,0,0,0.1)] dark:bg-neutral-900"
@@ -15,7 +15,7 @@
 
 	<!-- Text Content -->
 	<div class="flex flex-col justify-between space-y-3 p-6">
-		<a href="https://mybook.to/jrJ4bMO" target="_blank" rel="noopener noreferrer">
+		<a href="https://www.viz.com/slam-dunk" target="_blank" rel="noopener noreferrer">
 			<h2 class="dark: hover:text-primary text-xl font-semibold transition-colors">Slam Dunk</h2>
 		</a>
 
