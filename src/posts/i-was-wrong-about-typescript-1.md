@@ -173,8 +173,8 @@ type User = {
 };
 
 type SafeUser = {
-	id: string;
-	email: string;
+	name: string;
+	age: number;
 };
 
 // Function that should return a user

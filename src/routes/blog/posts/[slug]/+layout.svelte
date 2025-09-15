@@ -35,7 +35,7 @@
 	</h1>
 	<div class="mt-2 flex items-center justify-between border-b border-neutral-500">
 		<div class="flex items-center py-5 text-base">
-			<a href="/home">
+			<a href="/about">
 				<img
 					class="mr-3 h-10 w-10 rounded-full border-2 border-neutral-500"
 					src="/profile.jpeg"
