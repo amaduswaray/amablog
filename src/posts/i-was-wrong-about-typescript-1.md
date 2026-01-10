@@ -1,5 +1,5 @@
 ---
-title: 'I was wrong about TypeScript: Part 1'
+title: 'I Was Wrong About TypeScript: Part 1'
 description: 'TypeScript is a quirky language, but it can be cool when applied correctly'
 date: '2025-09-14'
 image: '/post-images/wrong-about-typescript/thumbnail.jpg'
