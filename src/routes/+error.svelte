@@ -1,0 +1,88 @@
+<script lang="ts">
+	import { page } from '$app/stores';
+	import type { Post } from '$lib/types';
+
+	const paths = import.meta.glob('/src/posts/*.md', { eager: true });
+	let posts: Post[] = [];
+
+	for (const path in paths) {
+		const file = paths[path];
+		const slug = path.split('/').at(-1)?.replace('.md', '');
+
+		if (file && typeof file === 'object' && 'metadata' in file && slug) {
+			const metadata = file.metadata as Omit<Post, 'slug'>;
+			const post = { ...metadata, slug } satisfies Post;
+			if (post.published) {
+				posts.push(post);
+			}
+		}
+	}
+
+	posts = posts.sort(
+		(first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
+	);
+
+	const recentPosts = posts.slice(0, 3);
+</script>
+
+<div class="mx-auto max-w-3xl px-6 py-16 text-center">
+	<div class="mb-8">
+		<h1 class="mb-4 text-6xl font-bold text-neutral-800 dark:text-neutral-200">
+			{$page.status}
+		</h1>
+		<h2 class="mb-2 text-3xl font-semibold text-neutral-700 dark:text-neutral-300">
+			Page Not Found
+		</h2>
+		<p class="text-lg text-neutral-600 dark:text-neutral-400">
+			Sorry, the page you're looking for doesn't exist. It may have been moved, deleted, or the URL
+			might be incorrect.
+		</p>
+	</div>
+
+	<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+		<a
+			href="/"
+			class="rounded-lg bg-neutral-800 px-6 py-3 font-semibold text-white transition-colors hover:bg-neutral-700 dark:bg-neutral-200 dark:text-neutral-900 dark:hover:bg-neutral-300"
+		>
+			Go Home
+		</a>
+		<a
+			href="/blog"
+			class="rounded-lg border border-neutral-300 px-6 py-3 font-semibold text-neutral-800 transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+		>
+			View Blog
+		</a>
+		<a
+			href="/about"
+			class="rounded-lg border border-neutral-300 px-6 py-3 font-semibold text-neutral-800 transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+		>
+			About Me
+		</a>
+	</div>
+
+	{#if recentPosts.length > 0}
+		<div class="mb-8">
+			<h3 class="mb-4 text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+				Or check out some recent posts:
+			</h3>
+			<div class="space-y-3">
+				{#each recentPosts as post}
+					<a
+						href="/blog/posts/{post.slug}"
+						class="block rounded-lg border border-neutral-300 bg-white p-4 text-left transition-all hover:border-neutral-400 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800 dark:hover:border-neutral-600"
+					>
+						<h4 class="font-semibold text-neutral-800 dark:text-neutral-200">
+							{post.title}
+						</h4>
+						<p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+							{post.description}
+						</p>
+						<p class="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+							{post.date}
+						</p>
+					</a>
+				{/each}
+			</div>
+		</div>
+	{/if}
+</div>

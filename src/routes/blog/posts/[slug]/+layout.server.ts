@@ -21,7 +21,7 @@ export const load: LayoutServerLoad = async ({ params }) => {
 			metadata: markdownPost.metadata,
 			readTime
 		};
-	} catch (e) {
+	} catch (_) {
 		throw error(404, {
 			message: 'Post not found'
 		});
