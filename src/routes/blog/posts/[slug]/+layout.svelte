@@ -11,6 +11,16 @@
 	const { metadata, readTime } = relData;
 </script>
 
+<svelte:head>
+	<title>{metadata.title} | Amadu's and Don'ts</title>
+	<meta name="description" content={metadata.description} />
+	<meta property="og:title" content={metadata.title} />
+	<meta property="og:description" content={metadata.description} />
+	{#if metadata.image}
+		<meta property="og:image" content={metadata.image} />
+	{/if}
+</svelte:head>
+
 <article class="col-span-4 mx-auto w-full px-6 py-8 [:where(&)]:max-w-3xl">
 	<div>
 		<Breadcrumb.Root>
