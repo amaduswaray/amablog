@@ -1,6 +1,7 @@
 import type { MarkdownPost } from '$lib/types';
 import type { Component } from 'svelte';
 import type { LayoutServerLoad } from './$types';
+import { error } from '@sveltejs/kit';
 
 const calculateTime = (item: Component) => {
 	const text = item.toString();
@@ -11,11 +12,18 @@ const calculateTime = (item: Component) => {
 
 export const load: LayoutServerLoad = async ({ params }) => {
 	const slug = params.slug;
-	const markdownPost: MarkdownPost = await import(`../../../../posts/${slug}.md`);
-	const readTime = calculateTime(markdownPost.default);
 
-	return {
-		metadata: markdownPost.metadata,
-		readTime
-	};
+	try {
+		const markdownPost: MarkdownPost = await import(`../../../../posts/${slug}.md`);
+		const readTime = calculateTime(markdownPost.default);
+
+		return {
+			metadata: markdownPost.metadata,
+			readTime
+		};
+	} catch (e) {
+		throw error(404, {
+			message: 'Post not found'
+		});
+	}
 };
