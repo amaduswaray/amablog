@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Post } from '$lib/types';
+	import PostCard from '$lib/components/posts/PostCard.svelte';
 
 	const paths = import.meta.glob('/src/posts/*.md', { eager: true });
 	let posts: Post[] = [];
@@ -37,25 +38,19 @@
 
 	{#if recentPosts.length > 0}
 		<div class="mb-8">
-			<h3 class="mb-4 text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+			<h3 class="mb-6 text-xl font-semibold text-neutral-700 dark:text-neutral-300">
 				You might enjoy these recent posts:
 			</h3>
-			<div class="space-y-3">
+			<div class="flex flex-col items-center gap-6">
 				{#each recentPosts as post}
-					<a
-						href="/blog/posts/{post.slug}"
-						class="block rounded-lg border border-neutral-300 bg-white p-4 text-left transition-all hover:border-neutral-400 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800 dark:hover:border-neutral-600"
-					>
-						<h4 class="font-semibold text-neutral-800 dark:text-neutral-200">
-							{post.title}
-						</h4>
-						<p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-							{post.description}
-						</p>
-						<p class="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
-							{post.date}
-						</p>
-					</a>
+					<PostCard
+						img={post.image}
+						slug={post.slug}
+						title={post.title}
+						recent={true}
+						description={post.description}
+						date={post.date}
+					/>
 				{/each}
 			</div>
 		</div>
