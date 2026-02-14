@@ -6,7 +6,7 @@
 	const { posts } = data;
 </script>
 
-<div class="flex h-full w-full flex-1 flex-col gap-2 rounded-xl">
+<div class="flex h-full w-full flex-1 flex-col gap-2 rounded-xl mb">
 	<div class="relative border-b border-border p-8 pb-8 xl:flex-1">
 		<h1 class="text-6xl font-semibold lg:text-8xl">AMADU'S & DON'TS</h1>
 		<p class="py-4">Amadu Swaray — aka Chef Ama (pronounced: ey-may).</p>

@@ -26,7 +26,7 @@
 	<section class="mb-8">
 		<h2 class="mb-2 text-2xl font-semibold">What I'm Doing Now</h2>
 		<p class="mb-2">
-			I'm currently a fullstack developer at <span
+			I'm currently a DevOps engineer at <span
 				class="font-medium text-indigo-600 dark:text-pink-300">Orgbrain</span
 			>. Outside of work, I’m diving into systems programming and creating hobby projects
 			<span class="font-medium text-indigo-600 dark:text-pink-300">Rust</span>
