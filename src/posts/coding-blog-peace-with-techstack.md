@@ -1,6 +1,6 @@
 ---
 title: 'Coding a Tech Blog and Coming to Peace with My Techstack'
-description: 'Finally created a blog to share my thoughts, and Im no longer obessed with finding the best tech stack'
+description: 'Finally created a blog to share my thoughts, and I\'m no longer obsessed with finding the best tech stack'
 date: '2025-07-20'
 image: '/post-images/coding-blog/thumbnail.jpg'
 categories:
@@ -108,7 +108,7 @@ I started exploring it back in 2023 and decided to create a blog(that I never co
 
 ```elixir
 
-  defp filter_by_category(posts, "all"), do: posts # Returns all posts if the string "all is passed in as parameter"
+  defp filter_by_category(posts, "all"), do: posts # Returns all posts if the string "all" is passed in as parameter
   defp filter_by_category(posts, category) do # Actually filters
     Enum.filter(posts, fn
       %{category: ^category} -> true

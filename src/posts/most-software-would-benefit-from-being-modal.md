@@ -1,6 +1,6 @@
 ---
 title: 'Most Software Would Benefit From Being Modal'
-description: 'Most software has their own keybinds and methods to optimize workflows, however, vim inspired modes would benifit many software programs'
+description: 'Most software has their own keybinds and methods to optimize workflows, however, vim inspired modes would benefit many software programs'
 date: '2026-01-13'
 image: '/post-images/modal-software/thumbnail.jpg'
 categories:

@@ -1,6 +1,6 @@
 ---
 title: 'The Biggest Takeaway from My Studies'
-description: 'Reflecting on the biggest takeway from university'
+description: 'Reflecting on the biggest takeaway from university'
 date: '2025-07-30'
 image: '/post-images/takeaways-from-studies/thumbnail.jpg'
 categories:

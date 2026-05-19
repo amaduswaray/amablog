@@ -200,7 +200,7 @@ handleError("User uploaded invalid file"); // ❌ Custom message
 
 ```
 
-In the code example, we'll get auto-complete on the default errors we we have defined, but what if we also want to create other error error messages? That's where the `{} & string` syntax comes in handy.
+In the code example, we'll get auto-complete on the default errors we have defined, but what if we also want to create other error messages? That's where the `{} & string` syntax comes in handy.
 
 ```TypeScript
 // We can define a flexible error type as follows

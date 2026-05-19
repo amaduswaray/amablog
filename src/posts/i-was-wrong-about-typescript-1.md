@@ -11,7 +11,7 @@ published: true
 
 ## TLDR
 
-Typescript is a peculiar language that is far from perfect, however, when spending some time to configure it, it's type system is actually quite good.
+TypeScript is a peculiar language that is far from perfect, however, when spending some time to configure it, its type system is actually quite good.
 
 This is part one of a two-part article. The first part shows the issues I have with typescript.
 
@@ -19,19 +19,19 @@ The second part can be read <a href="/posts/i-was-wrong-about-typescript-2" targ
 
 ## Background
 
-Typescript, also known as the superset of Javascript is quite the language. However, before going into why I was wrong about typescript, I'll give the background of my experience with the language so we can truly appreciate how great the language turned out to be.
+TypeScript, also known as the superset of JavaScript is quite the language. However, before going into why I was wrong about typescript, I'll give the background of my experience with the language so we can truly appreciate how great the language turned out to be.
 
-My programming jounrey is quite similar to anyone who has a degree in CS. I've done the algorithms and data structures stuff, the network stuff and essentially coding many abstract problems. Most of my programming was done in languages such as Java, Python, and C. After a while I started dabbling into Rust and other languages.
+My programming journey is quite similar to anyone who has a degree in CS. I've done the algorithms and data structures stuff, the network stuff and essentially coding many abstract problems. Most of my programming was done in languages such as Java, Python, and C. After a while I started dabbling into Rust and other languages.
 
-For those unfamilar with Rust, its a systems(or general purpose) programming language that has a strong focus on safety. With this comes vast and strict type system that forces you to think about the code you write and how you use types
+For those unfamiliar with Rust, it's a systems (or general purpose) programming language that has a strong focus on safety. With this comes vast and strict type system that forces you to think about the code you write and how you use types
 
 This way of coding is something I enjoyed. I'm known to be quite the early abstracter, and I love to setup my code and solutions in a way that makes it easy to use later on in the code(function definitions, type definitions, interfaces, etc.). Rust's strict system forces you to be correct in the way you write the code, but the payoff later was worth it. Perfect autocomplete and type safety throughout the codebase, in addition to also the code working as expected.
 
 ## The problems with typescript
 
-The issues with TypeScript isn't something that is inherently a typescript thing, but rather something that is derived from the issues JavaScript has.
+The issues with TypeScript aren't something that is inherently a TypeScript thing, but rather something that is derived from the issues JavaScript has.
 
-Lets look at some of the first issues with typescript.
+Let's look at some of the first issues with TypeScript.
 
 ### No concrete error return types.
 
@@ -47,7 +47,7 @@ function fetchData(): {
 
 ```
 
-The issue here is that first of all, this function can throw an error in multiple places, but the compiler tells doesn't tell us anything about the fact that this function can error.
+The issue here is that first of all, this function can throw an error in multiple places, but the compiler doesn't tell us anything about the fact that this function can error.
 
 If I were to call this function anywhere else, I would not know that it potentially can error until runtime.
 
@@ -67,11 +67,11 @@ function fetchData(): {
 
 ```
 
-The issue here is that the code is quite verbose, and wrapping everything in a try catch block is quite tedius. Secondly, we have no idea of what kind of error was thrown, or where in the try block it was thrown. Third, as programmers, we shouldn't have to guess when something can throw. So in vanilla typescript, this is a consistent issue that makes it hard to take the language seriously.
+The issue here is that the code is quite verbose, and wrapping everything in a try catch block is quite tedious. Secondly, we have no idea of what kind of error was thrown, or where in the try block it was thrown. Third, as programmers, we shouldn't have to guess when something can throw. So in vanilla typescript, this is a consistent issue that makes it hard to take the language seriously.
 
 ### Any is everywhere
 
-My second issue with typescript is the `any` type. I thought that this was a joke when I first saw it. I had a friend who would always say "isn't typescript just javascript with `:any` behind every declaration?"
+My second issue with TypeScript is the `any` type. I thought that this was a joke when I first saw it. I had a friend who would always say "isn't typescript just javascript with `:any` behind every declaration?"
 
 The crazy part is that this is somewhat true.
 
@@ -117,17 +117,17 @@ function returnNotUser(user: User) {
 
 ```
 
-In typecript's not so strict type system, you can cast anything to the `any` type. And from the `any` type, you can cast it to whichever type you wish.
+In TypeScript's not so strict type system, you can cast anything to the `any` type. And from the `any` type, you can cast it to whichever type you wish.
 
 The compiler does not complain about this, despite it being inherently wrong. This is something that will fail at runtime. If we were to access the `id` or `email` property on the returned object, the program would crash.
 
 ### Lack of strictness by default
 
-The fact that typescript is not strict essentially removes the benefits of using a type safe language in the first place.
+The fact that TypeScript is not strict essentially removes the benefits of using a type safe language in the first place.
 
 If we were to create a perfect type safe codebase, the coding experience would be great, with auto-completes and type safety throughout the codebase. However, because we can override the strictness, all it takes is one place in the code to remove all of the inferred types and type safety.
 
-Here is another example forcing typescript to not be strict. **The `!!` syntax:**
+Here is another example forcing TypeScript to not be strict. **The `!!` syntax:**
 
 ```typescript
 // A function that expects a User obj
