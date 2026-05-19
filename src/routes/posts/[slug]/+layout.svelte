@@ -67,7 +67,7 @@
 		reactionsEnabled="1"
 		emitMetadata="0"
 		inputPosition="bottom"
-		theme={mode.current === 'light' ? 'light' : 'dark'}
+		theme={mode.current === 'light' ? 'catppuccin_latte' : 'catppuccin_mocha'}
 		lang="en"
 		loading="lazy"
 	/>

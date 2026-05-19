@@ -14,51 +14,51 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Light mode variables — kept exactly as-is */
+/* Light mode variables — Rose Pine Dawn inspired */
 :root {
   --radius: 0.25rem;
 
-  --background: hsl(210, 30%, 98%);
-  --foreground: hsl(210, 15%, 10%);
+  --background: #faf4ed;
+  --foreground: #2f2b45;
 
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(210, 15%, 10%);
+  --card: #fffaf3;
+  --card-foreground: #2f2b45;
 
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(210, 15%, 10%);
+  --popover: #fffaf3;
+  --popover-foreground: #2f2b45;
 
-  --primary: hsl(212, 85%, 55%);
-  --primary-foreground: hsl(0, 0%, 100%);
+  --primary: #907aa9;
+  --primary-foreground: #fffaf3;
 
-  --secondary: hsl(210, 20%, 90%);
-  --secondary-foreground: hsl(210, 15%, 32%);
+  --secondary: #f4ede8;
+  --secondary-foreground: #5e5975;
 
-  --muted: hsl(210, 15%, 95%);
-  --muted-foreground: hsl(210, 15%, 42%);
+  --muted: #f4ede8;
+  --muted-foreground: #5e5975;
 
-  --accent: hsl(340, 65%, 60%);
-  --accent-foreground: hsl(0, 0%, 100%);
+  --accent: #d7827e;
+  --accent-foreground: #fffaf3;
 
-  --destructive: hsl(0, 65%, 55%);
+  --destructive: #b4637a;
 
-  --border: hsl(210, 20%, 85%);
-  --input: hsl(210, 20%, 95%);
-  --ring: hsl(212, 80%, 65%);
+  --border: #cec8c0;
+  --input: #e8e0d7;
+  --ring: #907aa9;
 
-  --chart-1: hsl(212, 85%, 55%);
-  --chart-2: hsl(180, 80%, 50%);
-  --chart-3: hsl(340, 65%, 60%);
-  --chart-4: hsl(45, 90%, 60%);
-  --chart-5: hsl(300, 70%, 60%);
+  --chart-1: #907aa9;
+  --chart-2: #286983;
+  --chart-3: #d7827e;
+  --chart-4: #ea9d34;
+  --chart-5: #907aa9;
 
-  --sidebar: hsl(210, 20%, 98%);
-  --sidebar-foreground: hsl(210, 15%, 15%);
-  --sidebar-primary: hsl(212, 85%, 55%);
-  --sidebar-primary-foreground: hsl(0, 0%, 100%);
-  --sidebar-accent: hsl(340, 65%, 60%);
-  --sidebar-accent-foreground: hsl(0, 0%, 100%);
-  --sidebar-border: hsl(210, 20%, 85%);
-  --sidebar-ring: hsl(212, 80%, 65%);
+  --sidebar: #faf4ed;
+  --sidebar-foreground: #2f2b45;
+  --sidebar-primary: #907aa9;
+  --sidebar-primary-foreground: #fffaf3;
+  --sidebar-accent: #d7827e;
+  --sidebar-accent-foreground: #fffaf3;
+  --sidebar-border: #cec8c0;
+  --sidebar-ring: #907aa9;
 }
 
 /* Dark mode variables — Rose Pine inspired with custom #090B10 base */
@@ -189,6 +189,65 @@
   .dark {
     scrollbar-width: thin;
     scrollbar-color: rgba(224, 222, 244, 0.15) transparent;
+  }
+
+  /* Prose / markdown overrides for light mode (Rose Pine Dawn) */
+  .prose {
+    color: #2f2b45;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    color: #2f2b45;
+  }
+
+  .prose a {
+    color: #907aa9;
+    transition: color 0.15s ease;
+  }
+
+  .prose a:hover {
+    color: #6b5a82;
+  }
+
+  .prose strong {
+    color: #c76b67;
+  }
+
+  .prose em {
+    color: #6b5a82;
+  }
+
+  .prose blockquote {
+    border-left-color: #cec8c0;
+    color: #5e5975;
+  }
+
+  .prose hr {
+    border-color: #cec8c0;
+  }
+
+  .prose code {
+    color: #c76b67;
+    background-color: #f4ede8;
+  }
+
+  .prose pre {
+    background-color: #f4ede8;
+    border-color: #cec8c0;
+  }
+
+  .prose ol > li::marker,
+  .prose ul > li::marker {
+    color: #7a758c;
+  }
+
+  .prose figcaption {
+    color: #7a758c;
   }
 
   /* Prose / markdown overrides for dark mode (Rose Pine) */
