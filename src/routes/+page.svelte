@@ -96,7 +96,7 @@
 	<!-- Right panel -->
 
 	<!-- Right panel -->
-	<div class="flex flex-1 flex-col justify-between p-8">
+	<div class="flex flex-1 flex-col justify-between gap-8 p-8">
 		<div>
 			<h2 class="text-muted-foreground mb-6 text-xs font-semibold tracking-widest uppercase">
 				Projects
