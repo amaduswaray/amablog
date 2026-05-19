@@ -15,7 +15,7 @@ TypeScript is a peculiar language that is far from perfect, however, when spendi
 
 This is part two of a two-part article. This part shows why I came to like TypeScript more than before.
 
-The first part can be read [here](/posts/i-was-wrong-about-typescript-1).
+The first part can be read <a href="/posts/i-was-wrong-about-typescript-1" target="_blank">here</a>.
 
 ## What changed my mind
 
@@ -29,7 +29,7 @@ Well this changed when getting a new job, and working under my current boss. He 
 
 That's when I finally understood how to create a "Rust-like" experience with TypeScript. He introduced me to various developers and content creators in the TypeScript community who had built impressive tooling and abstractions that made the language significantly more powerful and enjoyable to work with.
 
-Lets take a look at some of the code from [part 1](/posts/i-was-wrong-about-typescript-1)
+Lets take a look at some of the code from <a href="/posts/i-was-wrong-about-typescript-1" target="_blank">part 1</a>
 
 ```TypeScript
 function fetchData(): {
