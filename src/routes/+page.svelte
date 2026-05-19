@@ -64,7 +64,7 @@
 			</section>
 
 			<section>
-				<h2 class="text-foreground mb-1 text-sm font-semibold">What I'm Doing Now</h2>
+				<h2 class="text-foreground mb-1 text-sm font-semibold">Work</h2>
 				<p class="text-muted-foreground text-sm leading-relaxed">
 					Currently a developer at
 					<span class="text-primary font-medium">Orgbrain</span>. Outside of work, I'm diving into
