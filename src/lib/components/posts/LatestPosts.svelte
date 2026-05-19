@@ -1,30 +1,21 @@
 <script lang="ts">
 	import PostCard from '$lib/components/posts/PostCard.svelte';
 
-	type Post = {
-		title: string;
-		description: string;
-		slug: string;
-		image?: string;
-		date: string;
-		categories: string[];
-		published: boolean;
-	};
-
-	const { posts }: { posts: Post[] } = $props();
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const { posts }: { posts: any[] } = $props();
 </script>
 
-<div>
-	<div class="grid w-full grid-cols-1 justify-items-center gap-6 xl:gap-10">
-		{#each posts as post (post.slug)}
-			<PostCard
-				recent={true}
-				title={post.title}
-				slug={post.slug}
-				img={post.image}
-				description={post.description}
-				date={post.date}
-			/>
-		{/each}
-	</div>
+<div class="flex flex-col">
+	{#each posts as post (post.slug)}
+		<a
+			href={`/posts/${post.slug}`}
+			class="group flex items-start gap-4 border-l-2 border-border py-4 pl-4 transition-colors hover:border-primary"
+		>
+			<div class="flex-1">
+				<h3 class="font-semibold transition-colors group-hover:text-primary">{post.title}</h3>
+				<p class="mt-1 text-sm text-muted-foreground line-clamp-2">{post.description}</p>
+			</div>
+			<span class="shrink-0 text-xs text-muted-foreground">{post.date}</span>
+		</a>
+	{/each}
 </div>

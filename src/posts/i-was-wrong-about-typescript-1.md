@@ -15,7 +15,7 @@ Typescript is a peculiar language that is far from perfect, however, when spendi
 
 This is part one of a two-part article. The first part shows the issues I have with typescript.
 
-The second part can be read [here](/blog/posts/i-was-wrong-about-typescript-2).
+The second part can be read [here](/posts/i-was-wrong-about-typescript-2).
 
 ## Background
 

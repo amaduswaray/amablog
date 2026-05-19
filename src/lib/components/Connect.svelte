@@ -2,14 +2,14 @@
 	<!-- Social icons placeholders -->
 	<a
 		href="https://x.com/chefamaa?s=21&t=HBK62wWnDyyXC_gmB--gyg"
-		aria-label="Twitter"
+		aria-label="X"
 		target="_blank"
 		rel="noopener noreferrer"
-		class="hover:text-primary dark:hover:text-primary transition-colors"
+		class="hover:text-primary transition-colors"
 	>
 		<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"
 			><path
-				d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.57 8.57 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.15 12.15 0 0 1 3.15 4.57a4.27 4.27 0 0 0 1.33 5.72 4.2 4.2 0 0 1-1.94-.54v.05a4.28 4.28 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.97A8.6 8.6 0 0 1 2 19.54 12.11 12.11 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.54A8.36 8.36 0 0 0 22.46 6z"
+				d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
 			/></svg
 		>
 	</a>
@@ -18,7 +18,7 @@
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="GitHub"
-		class="hover:text-primary dark:hover:text-primary transition-colors"
+		class="hover:text-primary transition-colors"
 	>
 		<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"
 			><path
@@ -26,17 +26,4 @@
 			/></svg
 		>
 	</a>
-	<!-- <a
-		href="https://www.linkedin.com/in/amaduswaray/"
-		aria-label="LinkedIn"
-		target="_blank"
-		rel="noopener noreferrer"
-		class="hover:text-primary dark:hover:text-primary transition-colors"
-	>
-		<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"
-			><path
-				d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-9.5 14v-6H7v6h2.5zm-1.25-6.88c.83 0 1.5-.68 1.5-1.5s-.67-1.5-1.5-1.5-1.5.68-1.5 1.5.67 1.5 1.5 1.5zM17 17v-3.5a1.75 1.75 0 0 0-3.5 0V17H17z"
-			/></svg
-		>
-	</a> -->
 </div>

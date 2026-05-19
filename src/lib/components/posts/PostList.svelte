@@ -18,10 +18,8 @@
 	<div class="grid w-full grid-cols-1 justify-items-center gap-6 xl:gap-10">
 		{#each posts as post (post.slug)}
 			<PostCard
-				recent={false}
 				title={post.title}
 				slug={post.slug}
-				img={post.image}
 				description={post.description}
 				date={post.date}
 			/>

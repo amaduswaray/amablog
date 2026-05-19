@@ -28,13 +28,13 @@
 
 <div class="mx-auto max-w-3xl px-6 py-16 text-center">
 	<div class="mb-8">
-		<h1 class="mb-4 text-6xl font-bold text-neutral-800 dark:text-neutral-200">
+		<h1 class="dark:text-foreground mb-4 text-6xl font-bold text-neutral-800">
 			{$page.status}
 		</h1>
-		<h2 class="mb-2 text-3xl font-semibold text-neutral-700 dark:text-neutral-300">
+		<h2 class="dark:text-foreground/80 mb-2 text-3xl font-semibold text-neutral-700">
 			Page Not Found
 		</h2>
-		<p class="text-lg text-neutral-600 dark:text-neutral-400">
+		<p class="dark:text-muted-foreground text-lg text-neutral-600">
 			Sorry, the page you're looking for doesn't exist. It may have been moved, deleted, or the URL
 			might be incorrect.
 		</p>
@@ -43,36 +43,28 @@
 	<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
 		<a
 			href="/"
-			class="rounded-lg bg-neutral-800 px-6 py-3 font-semibold text-white transition-colors hover:bg-neutral-700 dark:bg-neutral-200 dark:text-neutral-900 dark:hover:bg-neutral-300"
+			class="dark:bg-primary dark:text-background dark:hover:bg-primary/90 rounded-sm bg-neutral-800 px-6 py-3 font-semibold text-white transition-colors hover:bg-neutral-700"
 		>
 			Go Home
 		</a>
 		<a
-			href="/blog"
-			class="rounded-lg border border-neutral-300 px-6 py-3 font-semibold text-neutral-800 transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+			href="/posts"
+			class="dark:border-border dark:text-foreground dark:hover:bg-muted rounded-sm border border-neutral-300 px-6 py-3 font-semibold text-neutral-800 transition-colors hover:bg-neutral-100"
 		>
-			View Blog
-		</a>
-		<a
-			href="/about"
-			class="rounded-lg border border-neutral-300 px-6 py-3 font-semibold text-neutral-800 transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
-		>
-			About Me
+			View Posts
 		</a>
 	</div>
 
 	{#if recentPosts.length > 0}
 		<div class="mb-8">
-			<h3 class="mb-6 text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+			<h3 class="dark:text-foreground/80 mb-6 text-xl font-semibold text-neutral-700">
 				Or check out some recent posts:
 			</h3>
 			<div class="flex flex-col items-center gap-6">
-				{#each recentPosts as post}
+				{#each recentPosts as post (post.slug)}
 					<PostCard
-						img={post.image}
 						slug={post.slug}
 						title={post.title}
-						recent={true}
 						description={post.description}
 						date={post.date}
 					/>

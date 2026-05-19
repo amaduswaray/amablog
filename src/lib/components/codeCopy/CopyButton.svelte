@@ -17,8 +17,8 @@
 <button
 	bind:this={copyButton}
 	on:click={handleClick}
-	class={`absolute top-2 right-2 cursor-pointer rounded-md bg-inherit p-1
-  ${showCheckmark ? 'text-green-500' : 'hover:text-primary text-white'}`}
+	class={`absolute top-2 right-2 cursor-pointer rounded-sm bg-inherit p-1
+  ${showCheckmark ? 'text-green-400' : 'hover:text-primary text-foreground/80'}`}
 >
 	{#if showCheckmark}
 		<CheckIcon class="h-6 w-6" />

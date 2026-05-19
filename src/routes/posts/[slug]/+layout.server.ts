@@ -14,7 +14,7 @@ export const load: LayoutServerLoad = async ({ params }) => {
 	const slug = params.slug;
 
 	try {
-		const markdownPost: MarkdownPost = await import(`../../../../posts/${slug}.md`);
+		const markdownPost: MarkdownPost = await import(`../../../posts/${slug}.md`);
 		const readTime = calculateTime(markdownPost.default);
 
 		return {

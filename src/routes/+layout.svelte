@@ -7,9 +7,17 @@
 	let { children } = $props();
 </script>
 
-<div class="flex min-h-screen flex-col">
+<svelte:head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="Amadu" />
+	<meta name="theme-color" content="#090B10" />
+	<link rel="icon" href="/logo.png" />
+</svelte:head>
+
+<div class="relative h-[100dvh] overflow-hidden">
 	<Navbar />
-	<main class="mx-auto w-full flex-grow pt-28 [:where(&)]:max-w-3xl">
+	<main class="h-full overflow-y-auto pt-14 pb-16">
 		<ModeWatcher />
 		{@render children()}
 	</main>
