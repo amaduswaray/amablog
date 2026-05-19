@@ -16,7 +16,7 @@
 		</div>
 
 		<span class="text-muted-foreground text-xs">
-			&copy; {date.getFullYear()} Amadu. All rights reserved.
+			&copy; {date.getFullYear()} All rights reserved.
 		</span>
 
 		<Connect />
