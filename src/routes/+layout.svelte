@@ -3,8 +3,14 @@
 	import Navbar from '$lib/components/layouts/Navbar.svelte';
 	import Footer from '$lib/components/layouts/Footer.svelte';
 	import { ModeWatcher } from 'mode-watcher';
+	import { onNavigate } from '$app/navigation';
 
 	let { children } = $props();
+
+	onNavigate(() => {
+		const main = document.querySelector('main');
+		if (main) main.scrollTo({ top: 0, behavior: 'instant' });
+	});
 </script>
 
 <svelte:head>

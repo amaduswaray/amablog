@@ -1,6 +1,6 @@
 ---
 title: 'Coding a Tech Blog and Coming to Peace with My Techstack'
-description: 'Finally created a blog to share my thoughts, and I\'m no longer obsessed with finding the best tech stack'
+description: "Finally created a blog to share my thoughts, and I'm no longer obsessed with finding the best tech stack"
 date: '2025-07-20'
 image: '/post-images/coding-blog/thumbnail.jpg'
 categories:

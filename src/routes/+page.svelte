@@ -29,7 +29,7 @@
 	/>
 </svelte:head>
 
-<div class="border-border mx-auto flex min-h-full max-w-7xl flex-col border-x xl:flex-row">
+<div class="border-border mx-auto flex min-h-full max-w-7xl flex-col sm:border-x xl:flex-row">
 	<!-- Left panel -->
 	<div class="border-border flex flex-col border-b p-8 xl:w-1/2 xl:border-r xl:border-b-0">
 		<div class="mb-2 flex items-center gap-3">
