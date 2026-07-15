@@ -4,12 +4,13 @@
 	import Footer from '$lib/components/layouts/Footer.svelte';
 	import { ModeWatcher } from 'mode-watcher';
 	import { onNavigate } from '$app/navigation';
+	import { page } from '$app/state';
 
 	let { children } = $props();
+	let isPostsRoute = $derived(page.url.pathname === '/posts' || page.url.pathname.startsWith('/posts/'));
 
 	onNavigate(() => {
-		const main = document.querySelector('main');
-		if (main) main.scrollTo({ top: 0, behavior: 'instant' });
+		window.scrollTo({ top: 0, behavior: 'auto' });
 	});
 </script>
 
@@ -21,11 +22,11 @@
 	<link rel="icon" href="/logo.png" />
 </svelte:head>
 
-<div class="relative h-[100dvh] overflow-hidden">
+<div class="relative min-h-[100dvh]">
 	<Navbar />
-	<main class="h-full overflow-y-auto pt-14 pb-16">
+	<main class={isPostsRoute ? 'pt-14' : 'min-h-[100dvh] pt-14 pb-16'}>
 		<ModeWatcher />
 		{@render children()}
 	</main>
-	<Footer />
+	<Footer fixed={!isPostsRoute} />
 </div>

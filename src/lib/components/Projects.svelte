@@ -1,22 +1,7 @@
 <script lang="ts">
-	const projects = [
-		{
-			title: 'amablog',
-			description:
-				'A terminal-inspired personal blog built with SvelteKit, Tailwind CSS, and a whole lot of caffeine. Features rose-pine theming, monospace typography, and a vim-like aesthetic.',
-			language: 'Svelte',
-			stars: 12,
-			url: '#'
-		},
-		{
-			title: 'dotfiles',
-			description:
-				'My carefully curated Neovim, tmux, and shell configurations. Optimized for speed, minimalism, and the perfect dark mode experience across all tools.',
-			language: 'Lua',
-			stars: 8,
-			url: '#'
-		}
-	];
+	import type { Project } from '$lib/types';
+
+	let { projects }: { projects: Project[] } = $props();
 </script>
 
 <div class="flex flex-col gap-4">

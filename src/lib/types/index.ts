@@ -14,3 +14,11 @@ export type Post = {
 	categories: string[];
 	published: boolean;
 };
+
+export type Project = {
+	title: string;
+	description: string;
+	language: string;
+	stars: number;
+	url: string;
+};

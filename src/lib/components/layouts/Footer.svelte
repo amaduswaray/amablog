@@ -3,12 +3,17 @@
 	import { toggleMode, mode } from 'mode-watcher';
 	import { SunIcon, MoonIcon } from '@lucide/svelte';
 
+	let { fixed = true }: { fixed?: boolean } = $props();
+
 	const date = new Date();
+	const footerClass = $derived(
+		`border-border bg-background/95 flex h-16 w-full items-center border-t backdrop-blur-lg ${
+			fixed ? 'fixed bottom-0 left-0 z-40' : 'relative'
+		}`
+	);
 </script>
 
-<footer
-	class="border-border bg-background/95 fixed bottom-0 left-0 z-40 flex h-16 w-full items-center border-t backdrop-blur-lg"
->
+<footer class={footerClass}>
 	<div class="mx-auto flex h-full w-full max-w-7xl items-center justify-between px-8">
 		<div class="hidden flex-col leading-none sm:flex">
 			<a href="/" class="hover:text-primary text-sm font-semibold tracking-wide transition-colors">

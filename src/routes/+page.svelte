@@ -3,9 +3,9 @@
 	import Book from '$lib/components/featured/Book.svelte';
 	import Music from '$lib/components/featured/Music.svelte';
 	import LatestPosts from '$lib/components/posts/LatestPosts.svelte';
-	//import Projects from '$lib/components/Projects.svelte';
+	import Projects from '$lib/components/Projects.svelte';
 	const { data } = $props();
-	const { posts } = data;
+	const { posts, projects } = data;
 </script>
 
 <svelte:head>
@@ -94,15 +94,13 @@
 	</div>
 
 	<!-- Right panel -->
-
-	<!-- Right panel -->
 	<div class="flex flex-1 flex-col justify-between gap-8 p-8">
-		<!-- <div> -->
-		<!-- 	<h2 class="text-muted-foreground mb-6 text-xs font-semibold tracking-widest uppercase"> -->
-		<!-- 		Projects -->
-		<!-- 	</h2> -->
-		<!-- 	<Projects /> -->
-		<!-- </div> -->
+		<div>
+			<h2 class="text-muted-foreground mb-6 text-xs font-semibold tracking-widest uppercase">
+				Repos
+			</h2>
+			<Projects {projects} />
+		</div>
 		<div>
 			<h2 class="text-muted-foreground mb-6 text-xs font-semibold tracking-widest uppercase">
 				Latest Posts

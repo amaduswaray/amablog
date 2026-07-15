@@ -48,7 +48,7 @@
 
 	<hr class="dark:border-border my-6 border-neutral-200" />
 
-	<div class="prose dark:prose-invert text-foreground/80 text-justify text-base">
+	<div class="prose dark:prose-invert text-foreground/80 max-w-none text-justify text-base">
 		{@render children()}
 	</div>
 </article>
